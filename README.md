@@ -1,123 +1,117 @@
-# Informe Integral de Análisis de Datos: Eficiencia Operativa y Visualización Estratégica  
-_Caso de estudio de empresa ficticia: **Plataforma de apuestas**_
+# 📊 Informe Integral de Análisis de Datos: Eficiencia Operativa y Visualización Estratégica
+### 🏆 Caso de estudio: **Plataforma de Apuestas**
 
-## Introducción
+---
+## 📌 Introducción
+Este informe analiza datos operativos sobre **jugadores, depósitos y rendimiento de fuentes de tráfico**. Mediante un enfoque basado en datos, buscamos:
 
-Este informe tiene como objetivo analizar datos operativos relacionados con jugadores, depósitos y rendimiento de fuentes de tráfico. A través de un enfoque basado en datos, se busca identificar patrones de comportamiento, evaluar la eficiencia de las fuentes de adquisición y detectar posibles discrepancias en registros internos.
+✅ **Identificar patrones de comportamiento** de los jugadores.  
+✅ **Evaluar la eficiencia** de las fuentes de adquisición.  
+✅ **Detectar discrepancias** en los registros internos.  
 
-### **Contexto**
+💡 **Objetivo**: Mejorar la rentabilidad mediante decisiones estratégicas basadas en datos.
 
-La empresa opera en un entorno altamente competitivo donde comprender el comportamiento de los jugadores y optimizar estrategias de adquisición son claves para mejorar la rentabilidad. Este análisis se centra en:
+---
+## 📍 Contexto
+La empresa opera en un mercado competitivo donde **comprender el comportamiento del usuario** y **optimizar estrategias de adquisición** son claves. Este análisis se enfoca en:
 
-1. Evaluar métricas mensuales de **FTD (Primer Depósito)** y **CPA (Costo por Adquisición)**, esenciales para medir el éxito de campañas.
-2. Detectar y analizar **discrepancias** entre registros internos y datos calculados para garantizar calidad.
-3. Identificar las fuentes de tráfico más eficientes según jugadores generados y costos asociados.
+1. **Evaluar métricas mensuales de FTD (Primer Depósito) y CPA (Costo por Adquisición).**
+2. **Detectar y analizar discrepancias en registros internos.**
+3. **Identificar las fuentes de tráfico más eficientes.**  
 
-### **Metodología**
+---
+## 🛠️ Metodología
+🔹 **Python y SQLite** para procesamiento y estructuración de datos.  
+🔹 **Power BI** para visualización de resultados clave.  
+🔹 **Jupyter Notebook** como entorno principal de desarrollo.  
 
-El análisis se realizó utilizando:
+Este informe documenta los pasos realizados, hallazgos clave y conclusiones del análisis.
 
-- **Python y SQLite** para procesamiento y estructuración de datos.
-- **Power BI** para visualización y presentación de resultados clave.
-- **Jupyter Notebook** como entorno principal de desarrollo.
+---
+## 🗂️ Base de Datos y Análisis Preliminar con Jupyter
 
-Este informe documenta los pasos realizados, hallazgos clave y conclusiones derivadas del análisis.
+### 🏗️ 1. Creación de la Base de Datos
+Para centralizar y organizar los datos, se creó una **base de datos en SQLite**, lo que permite análisis estructurados y conexiones con herramientas externas.
 
-## Base de Datos y Análisis Preliminar con Jupyter
+### 📥 2. Carga de Datos
+Se importaron archivos CSV para estructurar la información en el Notebook y la base de datos.
 
-### 1. Creación de la Base de Datos
+### 🔍 3. Consultas Iniciales
+Se generaron DataFrames clave para el análisis:
+- **Estado de Jugadores**: Clasificación según FTD/CPA.
+- **FTD y CPA por Mes**: Comparación con el reporte interno.
 
-Para centralizar y organizar los datos, se creó una base de datos SQLite. Este enfoque permite análisis estructurados y conexiones con herramientas externas.
+### ⚖️ 4. Comparativa con Reporte Interno
+Se analizaron diferencias entre datos esperados y datos reales obtenidos del archivo `deposits.csv`.
 
-### 2. Carga de Datos
-
-Se inició con la lectura de archivos CSV para cargar información en el Notebook y la base de datos, permitiendo comenzar la manipulación de datos.
-
-### 3. Consultas Iniciales
-
-Se realizaron consultas SQL para crear dos DataFrames con información relevante:
-
-- **Identificación de Estado de Jugadores**: DataFrame con detalles de cada jugador y su estado (FTD/CPA).
-- **FTD y CPA por Mes**: DataFrame para comparar con el reporte interno, contando FTD y CPA mensuales.
-
-### 4. Comparativa con Reporte Interno
-
-Los datos del reporte interno de FTD/CPA esperados se compararon con los datos reales obtenidos del archivo `deposits.csv`.
-
-### 5. Análisis y Visualizaciones
-
-Se crearon visualizaciones para obtener insights clave:
+### 📊 5. Análisis y Visualizaciones
 
 #### FTD y CPA Esperado vs. Real
-
-La comparación muestra **diferencias iniciales significativas**, probablemente por **inconsistencias en recopilación histórica de datos**. Con el tiempo, las discrepancias disminuyen, reflejando una **mejor alineación** entre cifras internas y resultados observados.
+Se detectaron diferencias iniciales, con una tendencia a mejorar la alineación en registros internos con el tiempo.
 
 #### Proporción CPA vs. No CPA
+- **83.3%** de los jugadores son **CPA**.  
+- **16.7%** son **No CPA**.  
 
-El gráfico muestra que **83.3% de los jugadores son CPA**, mientras que solo **16.7% son No CPA**, indicando un **buen desempeño en captación y retención**.
+✅ Esto indica un **buen desempeño en captación y retención**.
 
 #### Histórico de Depósitos por Mes
-
-Los datos reflejan un **crecimiento constante y acelerado**, especialmente en meses recientes, vinculado al aumento de jugadores FTD/CPA.
+Crecimiento sostenido, con picos recientes ligados al aumento de jugadores FTD/CPA.
 
 #### Jugador con Mayor Depósito
-
-Destaca **Blake Edwards** con **$2,156.42** depositados. A pesar de la reducción en sus montos, los depósitos totales mensuales aumentan, sugiriendo una **base sólida de depositantes recurrentes**.
+**Blake Edwards** lidera con **$2,156.42** depositados.
 
 #### Jugadores por Fuente de Tráfico
+**Trafficker_2, Trafficker_4 y Trafficker_9** destacan como las fuentes más efectivas.
 
-**Trafficker_2, Trafficker_4 y Trafficker_9** sobresalen como las fuentes más efectivas en generación de jugadores.
+### 📤 6. Exportación de Resultados
+Los DataFrames finales fueron exportados como CSV y se cerró la conexión con la base de datos.
 
-### 6. Resultados
+---
+## 📊 Análisis de Datos y Power BI
 
-Tras el análisis, los DataFrames relevantes se exportaron como archivos CSV y se cerró la conexión con la base de datos.
-
-## Análisis de Datos y Power BI
-
-Se estableció una conexión desde Power BI a los archivos generados para crear visualizaciones dinámicas.
-
-### Modelo de Datos
-
+### 🏛️ Modelo de Datos
 Se integraron tablas originales (`deposits`, `players`, `traffic_sources`) con tablas procesadas (`player_status`, `combined_records`).
 
-### Medidas DAX
+### 🔢 Medidas DAX
+Se crearon **medidas DAX** para visualizaciones dinámicas.
 
-Se crearon medidas usando DAX para generar visualizaciones calculadas que combinan datos dinámicamente.
-
-### Dashboard
-
-Se desarrolló un tablero interactivo con:
+### 📊 Dashboard
+Se desarrolló un **tablero interactivo** con:
 
 - **FTD/CPA Real vs. Esperado por Mes**
 - **Costos por Registro, FTD y CPA**
 - **Análisis de Fuentes de Tráfico**
 - **Conteo de Depósitos por Mes**
-- **Top 10 Jugadores por Depósito Total**
+- **Top 10 Jugadores por Depósito Total**  
+
+**Vista previa del Dashboard**:
+![Dashboard](dashboard%20image.png)
 
 ### Filtros e Interactividad
+Se implementaron **filtros por fecha** y botones de **reinicio de vistas** para facilitar el análisis.
 
-Se incluyeron herramientas como filtros por fecha y botones para reiniciar vistas, mejorando la experiencia de análisis.
+---
+## 🔍 Conclusiones y Recomendaciones
 
-## Conclusiones y Recomendaciones
+### ⚙️ Flujo de Trabajo Automatizado
+El script en **Jupyter Notebook** permitió consolidar un **flujo automatizado y replicable** para el análisis de datos.
 
-### Flujo de Trabajo Automatizado
+### 📊 Hallazgos Clave
+✅ **Crecimiento sostenido** en depósitos y CPA.  
+✅ **Estabilidad en costos de adquisición**.  
+✅ **Diversificación de jugadores de alto valor**.  
+✅ **Eficiencia variable en fuentes de tráfico**.  
 
-El script en Jupyter Notebook permitió consolidar un flujo automatizado y replicable para procesar y analizar datos.
+### 🚀 Recomendaciones
+📌 Replicar estrategias de tráfico exitosas.  
+📌 Profundizar en motivaciones de jugadores de alto valor.  
+📌 Optimizar costos de CPA/FTD.  
+📌 Monitorear patrones de crecimiento continuamente.  
 
-### Hallazgos Clave
+---
+## 📂 Archivos Adjuntos
+📄 [Jupyter Notebook](bca_operations.ipynb)  
+📊 [Power BI](BCA_Operations_PALS.pbix)  
 
-- **Crecimiento sostenido en depósitos y CPA**
-- **Estabilidad en costos de adquisición**
-- **Diversificación de jugadores de alto valor**
-- **Eficiencia variable en fuentes de tráfico**
-
-### Recomendaciones
-
-- Replicar estrategias de fuentes de tráfico exitosas.
-- Profundizar en motivaciones de jugadores de alto valor.
-- Optimizar costos de CPA/FTD.
-- Monitorear patrones de crecimiento continuamente.
-
-## Archivos Adjuntos
-
-[Jupyter Notebook](bca_operations.ipynb) | [Power BI](BCA_Operations_PALS.pbix)
+🚀 **¡Análisis basado en datos para decisiones estratégicas!**
