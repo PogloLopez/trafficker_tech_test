@@ -112,6 +112,6 @@ El script en **Jupyter Notebook** permitió consolidar un **flujo automatizado y
 ---
 ## 📂 Archivos Adjuntos
 📄 [Jupyter Notebook](bca_operations.ipynb)  
-📊 [Power BI](BCA_Operations_PALS.pbix)  
+📊 [Power BI](<BCA Operations PALS.pbix>)  
 
 🚀 **¡Análisis basado en datos para decisiones estratégicas!**
